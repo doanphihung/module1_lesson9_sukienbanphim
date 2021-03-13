@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+    <style>
+        /*#myImages {*/
+        /*    position: absolute;*/
+        /*    !*top: 0;*!*/
+        /*    !*left: 0;*!*/
+        /*}*/
+    </style>
+
+</head>
+<body onload="doReady()">
+<form action="" method="">
+    <img src="images/nobita.png" alt="Nobita" id="myImages" style="position:absolute;left: 50px;
+     top:50px;" width = "200px"; height = "200px">
+
+
+    <script>
+        function doReady() {
+            // window.addEventListener('keydown', moveSelection);
+            window.addEventListener('keydown', function(e) {
+                switch (e.keyCode) {
+                    case 37:
+                        leftArrowPressed();
+                        break;
+                    case 39:
+                        rightArrowPressed();
+                        break;
+                    case 38:
+                        upArrowPressed();
+                        break;
+                    case 40:
+                        downArrowPressed();
+
+
+            }})
+        }
+        // function moveSelection(e) {
+        //     switch (e.keyCode) {
+        //         case 37:
+        //             leftArrowPressed();
+        //             break;
+        //         case 39:
+        //             rightArrowPressed();
+        //             break;
+        //         case 38:
+        //             upArrowPressed();
+        //             break;
+        //         case 40:
+        //             downArrowPressed();
+        //             break;
+        //     }
+        // }
+
+        function upArrowPressed() {
+            let element = document.getElementById("myImages");
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+        }
+        function downArrowPressed() {
+            var element = document.getElementById('myImages');
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+        }
+        function leftArrowPressed() {
+            var element = document.getElementById("myImages");
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+        }
+        function rightArrowPressed() {
+            var element = document.getElementById("myImages");
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+        }
+
+
+    </script>
+
+</form>
+<script>
+
+
+</script>
+
+</body>
+</html>
